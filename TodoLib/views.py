@@ -3,7 +3,7 @@ from django.views.generic import CreateView
 from TodoLib.models import Todo
 
 # Create your views here.
-class IndexView(Template):
+class IndexView(TemplateView):
     template_name = 'index.html'
     model = Todo
 
