@@ -1,0 +1,26 @@
+{% extends "base_page.html" %}
+
+{% block title %}Todo Listing{% endblock %}
+
+{% block content %}
+<h1>Todo Listing</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>ToDo-Name</th>
+        <th>ToDo-Description</th>
+        <th>Deadline</th>
+        <th>Actions</th>
+   
+    </tr>
+    {% for todo in object_list %}
+        <tr>
+            <td>{{ todo.name }}</td>
+            <td>{{ todo.genre }}</td>
+			<td>{{ todo.releaseDate }}</td>
+            <td>{{ todo.price }}</td>
+
+ 
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}
