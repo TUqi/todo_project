@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<title>ToDo-Tracker</title>
+  	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+  <body>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+   			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span> 
+				</button>
+   			<a class="navbar-brand" href="#">ToDo-Tracker</a>
+   			</div>
+ 			<div class="collapse navbar-collapse" id="myNavbar">
+       			<ul class="nav navbar-nav">
+					<li><a href="website.html">Overview</a></li>
+          			<li><a href="create.html">Create</a></li>
+          			<li class="active"><a href="edit.html">Edit</a></li>
+          			<li><a href="impressum.html">Contact</a></li>
+       			</ul>
+      		</div>
+    	</div>
+  	</nav>
+  
+  <div class="container">
+  <h2> Edit a ToDo</h2>
+  	<div class="form-group">
+  		<label>Choose a TODO:</label>
+  		 
+		 <div class="dropdown">
+  			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">choose
+  			<span class="caret"></span>
+			</button>
+  			<ul class="dropdown-menu" role="menu">
+    					<li role="presentation"><a role="menuitem" tabindex="-1"  href="#">Collect data</a></li>
+    					<li role="presentation"><a role="menuitem" tabindex="-1"  href="#">Data analysis</a></li>
+    					<li role="presentation"><a role="menuitem" tabindex="-1"  href="#">Cutting</a></li>
+			</ul>
+		</div>
+		
+			<label for="name">Name:</label>
+			<div class="form-group">
+      			<input type="text" class="form-control" id="name" placeholder="Enter a new ToDo name">
+    		</div>
+			<label>Description:</label>
+		<div class="form-group">
+      			<textarea class="form-control" rows="3" placeholder="Enter a new description with less than 160 words"></textarea>
+    		</div>
+			<label>Deadline:</label>
+			<div class="form-group">
+      			<input type="text" class="form-control" placeholder="Enter a new deadline">
+			</div>
+		<p></p>
+			<label>Progress:</label>
+			<div class="input-group">
+      			<input type="text" class="form-control" placeholder="Enter a new progress percentage" aria-describedby="basic-addon">
+				<span class="input-group-addon" id="basic-addon">%</span>
+			</div>
+		<p></p>
+    			<button type="submit" class="btn btn-default">Save</button>
+		</div>
+	</div>
+  
+  </body>
+</html>

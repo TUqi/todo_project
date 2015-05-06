@@ -37,13 +37,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index">ToDo-Tracker</a>
+                  <a class="navbar-brand" href="/todo">ToDo-Tracker</a>
             </div>
             <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="index">Overview</a></li>
-                <li class="active"><a href="create">Create</a></li>
-				<li><a href="contact">Contact</a></li>
+                <li><a href="/todo">Overview</a></li>
+                <li  class="active"><a href="/todo/create">Create</a></li>
+				<li><a href="/todo/contact">Contact</a></li>
             </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -51,34 +51,22 @@
 
 
  
- 	<div class="container">
-  	<h2>Create a ToDo</h2>
-	
-	<form action="/create" method="post" class="form-horizontal">
-        {% csrf_token %}
-  	
-  			<label for="name">Name:</label>
-			<div class="form-group">
-      			<input type="text" class="form-control" id="name" placeholder="Enter ToDo name">
-    		</div>
-    		<label>Description:</label>
-    		<div class="form-group">
-      			<textarea class="form-control" rows="3" placeholder="Enter description with less than 160 words"></textarea>
-    		</div>
-   			<label>Deadline:</label>
-    		<div class="form-group">
-      			<input type="text" class="form-control" placeholder="Enterdeadline">
-    		</div>
-		<p></p>
-			<label>Progress:</label>
-    		<div class="input-group">
-      			<input type="text" class="form-control" placeholder="Enter progress percentage" aria-describedby="basic-addon">
-				<span class="input-group-addon" id="basic-addon">%</span>
-			</div>
-		<p></p>
-			<button type="submit" class="btn btn-default">Submit</button>
-   	</div>
-	 </form>
+ 	{% block content %}
+	  <div class="container">
+<h1>Create a ToDo</h1>
+<form method="post" class="form">
+    {% csrf_token %}
+    {% for field in form %}
+        <div class="form-group">
+        {{ field.errors }}
+        {{ field.label_tag }}
+        {{ field }}
+        </div>
+    {% endfor %}
+    <input type="submit" value="Submit" />
+</form>
+   </div>
+{% endblock %}   
 
 
 
