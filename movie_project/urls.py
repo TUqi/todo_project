@@ -7,8 +7,8 @@ urlpatterns = [
 
 
     url(r'^admin/', include(admin.site.urls)),
-    	 url(r'^$', include(urls)),
-    	 	url(r'create$', include(urls)),
+     url(r'^todolib/', include('TodoLib.urls', namespace='todolib')),
+    	 
 
 
 ]
