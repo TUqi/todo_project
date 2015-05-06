@@ -1,9 +1,14 @@
-from django.http import HttpResponse
-from django.template.loader import get_template
-from django.template import Context
+from django.views.generic import TemplateView
+from django.views.generic import CreateView
+from TodoLib.models import Todo
 
+# Create your views here.
+class IndexView(Template):
+    template_name = 'index.html'
+    model = Todo
 
-	
-	def index(request)
-   t = get_template('index.html')
-    return HttpResponse(t) 
+class CreateView(CreateView):
+	template_name = 'create.html'
+	model = Todo
+	success_url = '/'	
+
