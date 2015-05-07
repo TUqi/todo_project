@@ -1,9 +1,9 @@
 # todo_project
 This website allows you to:
-    -list TODOs
-    -create TODOs
-    -edit TODOs
-    -delete TODOs.
+-list TODOs
+-create TODOs
+-edit TODOs
+-delete TODOs.
 
 ##Installation
 - get python and django, if not installed yet
